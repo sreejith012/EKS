@@ -1,6 +1,6 @@
 const userRoutes = (app, fs) => {
     // variables
-    const dataPath = './data/movies.json';
+    const dataPath = 's3://bucket.movies.json';
     // READ
     app.get('/users', (req, res) => {
       fs.readFile(dataPath, 'utf8', (err, data) => {
