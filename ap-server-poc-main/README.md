@@ -16,4 +16,11 @@
 * Other AWS Services(s3, route 53, IAM etc) will be created using Terrafom.<br />
 * In future, we can come up with a CICD Plan for the deployment process.<br />
 
+## S3 Security Soluton ##
+
+* Enable S3 Access Logs to identify incoming requests. Amazon athena can be used to query this logs to get information such as Source IP addrees, Timestamp, Operations performed on an object etc.<br />
+* Enable Monitoring(Cloudwatch), S3 server access logging & Cloudtrail for Auditing the s3 Data.<br />
+* Enable Versioning, Cross region replication & MFA Delete<br />
+* Enable Server Side Encryption & Client Side encryption using KMS for data at rest. Enforce only HTTPS(TLS) connections using S3 Bucket policy for   encrypting data at transit.<br />
+
 
